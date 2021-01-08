@@ -1,14 +1,33 @@
 # Agility Web
 A web frontend for agility port.
 
-# Technology stack 
+# Roadmap
+It is still very early, and a lot can change quickly, but the overall idea is to:
+
+1. Make a top-notch view for planned, running and completed competitions
+2. Enable registration of community/unofficial competitions
+3. Run competitions with this system (enter runs in this system)
+4. Enable payment for these unofficial competitions
+5. Make a competition planner - customising a schedule for one or more equipages.
+
+# Immediate TODOS
+* Incorporate logo
+* Set teaming - do not use default material colors
+* Work on competition table
+* Work on pagination and search
+
+# Technology stack
+Name dropping some technologies used in this project.
+ 
 * React CRA with Typescript
 * Authentication: Firebase
 * Database: Firestore
-* Main UI library: material-ui
-
+* Main UI framework: material-ui
+* Notable libraries: react-table and dayjs
 
 # Starting from scratch
+If you want to know how we ended up here, this is it:
+
 ```
 yarn create react-app agilityport --template typescript
 yarn [add|link] @vzmi/denali-react-beta # See prerequisites for the add vs link option
