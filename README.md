@@ -30,11 +30,11 @@ If you want to know how we ended up here, this is it:
 
 ```
 yarn create react-app agilityport --template typescript
-yarn [add|link] @vzmi/denali-react-beta # See prerequisites for the add vs link option
 ```
 
 ### Install and configure firebase
-
+npm install -g firebase-tools
+firebase init (firestore, emulator, hosting)
 
 ### Configure linting and best practices
 I'm a big fan of mandating a specific code style and auto fix, format

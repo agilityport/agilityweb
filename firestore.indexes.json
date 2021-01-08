@@ -1,0 +1,33 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "competitions",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "fromDate",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "toDate",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "competitions",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "source",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "fromDate",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

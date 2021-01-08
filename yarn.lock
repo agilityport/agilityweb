@@ -1230,10 +1230,10 @@
   resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/@firebase/auth-types/-/auth-types-0.10.1.tgz#7815e71c9c6f072034415524b29ca8f1d1770660"
   integrity sha1-eBXnHJxvByA0QVUkspyo8dF3BmA=
 
-"@firebase/auth@0.15.2":
-  version "0.15.2"
-  resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/@firebase/auth/-/auth-0.15.2.tgz#9ada3f37620d131a1c56994138a599b5c9f9ca2e"
-  integrity sha1-mto/N2INExocVplBOKWZtcn5yi4=
+"@firebase/auth@0.16.1":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@firebase/auth/-/auth-0.16.1.tgz#8b0c9a9c6ab29694ea6d7f467d91b9d3dd22fce8"
+  integrity sha512-7juD7D/kaxNti/xa5G+ZGJJs+bdJUWOW0MlNBtXwiG+TjMh69EDmwJnQmmc9h/32QVvXt1qo1OGWOoMMpF/2Gg==
   dependencies:
     "@firebase/auth-types" "0.10.1"
 
@@ -1252,10 +1252,10 @@
   dependencies:
     "@firebase/app-types" "0.6.1"
 
-"@firebase/database@0.8.1":
-  version "0.8.1"
-  resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/@firebase/database/-/database-0.8.1.tgz#a7bc1c01052d35817a242c21bfe09ab29ee485a3"
-  integrity sha1-p7wcAQUtNYF6JCwhv+Casp7khaM=
+"@firebase/database@0.8.2":
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@firebase/database/-/database-0.8.2.tgz#cfe893fa467bb5e55056ab2ffa8b2abc66a8ad52"
+  integrity sha512-E86yrom0Ii+61UScG44y1q3H3NuozzGGTGbYmiyTe1qK8Qvzuiu7yyfdDnqFW2fkeKvTRLoDeCpgZy27FgEndQ==
   dependencies:
     "@firebase/auth-interop-types" "0.1.5"
     "@firebase/component" "0.1.21"
@@ -1265,18 +1265,18 @@
     faye-websocket "0.11.3"
     tslib "^1.11.1"
 
-"@firebase/firestore-types@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/@firebase/firestore-types/-/firestore-types-2.0.0.tgz#1f6212553b240f1a8905bb8dcf1f87769138c5c0"
-  integrity sha1-H2ISVTskDxqJBbuNzx+HdpE4xcA=
+"@firebase/firestore-types@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@firebase/firestore-types/-/firestore-types-2.1.0.tgz#ad406c6fd7f0eae7ea52979f712daa0166aef665"
+  integrity sha512-jietErBWihMvJkqqEquQy5GgoEwzHnMXXC/TsVoe9FPysXm1/AeJS12taS7ZYvenAtyvL/AEJyKrRKRh4adcJQ==
 
-"@firebase/firestore@2.0.4":
-  version "2.0.4"
-  resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/@firebase/firestore/-/firestore-2.0.4.tgz#c4be6f3540f607fd8e200cfba83c4997c29447fe"
-  integrity sha1-xL5vNUD2B/2OIAz7qDxJl8KUR/4=
+"@firebase/firestore@2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@firebase/firestore/-/firestore-2.1.2.tgz#6a09062e4e4212ef52e46a9ce44b1e0c37c553f3"
+  integrity sha512-8yUdBLLr6UhE+IjPR+fxLBD0bDnEqF9GalohfURZeLQPaL3b+LtqqGCLvvXC4MKT0lJAHOV8J9LA6rHj8vI0/Q==
   dependencies:
     "@firebase/component" "0.1.21"
-    "@firebase/firestore-types" "2.0.0"
+    "@firebase/firestore-types" "2.1.0"
     "@firebase/logger" "0.2.6"
     "@firebase/util" "0.3.4"
     "@firebase/webchannel-wrapper" "0.4.1"
@@ -1344,10 +1344,10 @@
   resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/@firebase/performance-types/-/performance-types-0.0.13.tgz#58ce5453f57e34b18186f74ef11550dfc558ede6"
   integrity sha1-WM5UU/V+NLGBhvdO8RVQ38VY7eY=
 
-"@firebase/performance@0.4.4":
-  version "0.4.4"
-  resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/@firebase/performance/-/performance-0.4.4.tgz#5f13ea3b9a72a0ae9c36520c419be31448a0955a"
-  integrity sha1-XxPqO5pyoK6cNlIMQZvjFEiglVo=
+"@firebase/performance@0.4.5":
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/@firebase/performance/-/performance-0.4.5.tgz#3ab89208ed6fb80165e5594058e46dc85113cd78"
+  integrity sha512-oenEOaV/UzvV8XPi8afYQ71RzyrHoBesqOyXqb1TOg7dpU+i+UJ5PS8K64DytKUHTxQl+UJFcuxNpsoy9BpWzw==
   dependencies:
     "@firebase/component" "0.1.21"
     "@firebase/installations" "0.4.19"
@@ -2496,13 +2496,6 @@
   dependencies:
     "@typescript-eslint/types" "4.8.1"
     eslint-visitor-keys "^2.0.0"
-
-"@vzmi/denali-react-beta@^1.0.18":
-  version "1.0.18"
-  resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/@vzmi/denali-react-beta/-/vzmi-denali-react-beta-1.0.18.tgz#a8422f5192bfc736c03144a7edb9791f415afd28"
-  integrity sha1-qEIvUZK/xzbAMUSn7bl5H0Fa/Sg=
-  dependencies:
-    classnames "2.2.6"
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -3780,11 +3773,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@2.2.6:
-  version "2.2.6"
-  resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-  integrity sha1-Q5Nb/90pHzJtrQogUwmzjQD2UM4=
-
 clean-css@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.3.tgz#507b5de7d97b48ee53d84adb0160ff6216380f78"
@@ -4623,11 +4611,6 @@ delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
-
-denali-css@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/denali-css/-/denali-css-2.1.0.tgz#cef5def062c1206be0316e79ea2b47601db6178f"
-  integrity sha1-zvXe8GLBIGvgMW556itHYB22F48=
 
 depd@~1.1.2:
   version "1.1.2"
@@ -5797,21 +5780,21 @@ find-versions@^3.2.0:
   dependencies:
     semver-regex "^2.0.0"
 
-firebase@^8.1.1:
-  version "8.1.1"
-  resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/firebase/-/firebase-8.1.1.tgz#379094b724053931fda1086e9020a17b578e50d5"
-  integrity sha1-N5CUtyQFOTH9oQhukCChe1eOUNU=
+firebase@^8.2.2:
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/firebase/-/firebase-8.2.2.tgz#3ba46cad0470055bbedf68cb1ded7c4c07cbc525"
+  integrity sha512-a07aW2TTAA9S7p4mx5pu8hvtVokJEjAQlAocHKOWwmRJRIduE9Vvr/3i50FtujT5gGNr0Qm+EyWyB+/7TJiwnw==
   dependencies:
     "@firebase/analytics" "0.6.2"
     "@firebase/app" "0.6.13"
     "@firebase/app-types" "0.6.1"
-    "@firebase/auth" "0.15.2"
-    "@firebase/database" "0.8.1"
-    "@firebase/firestore" "2.0.4"
+    "@firebase/auth" "0.16.1"
+    "@firebase/database" "0.8.2"
+    "@firebase/firestore" "2.1.2"
     "@firebase/functions" "0.6.1"
     "@firebase/installations" "0.4.19"
     "@firebase/messaging" "0.7.3"
-    "@firebase/performance" "0.4.4"
+    "@firebase/performance" "0.4.5"
     "@firebase/polyfill" "0.3.36"
     "@firebase/remote-config" "0.1.30"
     "@firebase/storage" "0.4.2"
