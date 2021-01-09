@@ -1,0 +1,5 @@
+# https://securitytxt.org/
+
+# Not much here yet
+Contact: mailto:torbjorn@smorgrav.org
+Contact: https://hackerone.com/smorgrav

@@ -64,3 +64,9 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# OS tmp files
+.DS_Store
+
+# Build dir
+build/
