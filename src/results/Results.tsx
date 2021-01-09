@@ -1,9 +1,9 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {FirebaseContext} from './FirebaseProvider';
-import {CompetitionTable} from './CompetitionTable';
+import {FirebaseContext} from '../FirebaseProvider';
+import {CompetitionTable} from '../shared/CompetitionTable';
 import dayjs from 'dayjs';
 
-const CompetitionOverview = ({})=> {
+const Results = ({})=> {
   const firebase = useContext(FirebaseContext);
   const [comps, setComps] = useState<any>({});
 
@@ -11,29 +11,56 @@ const CompetitionOverview = ({})=> {
     if (firebase.firestore) {
       firebase.firestore()
           .collection('competitions')
+          .where('status', 'in',
+              ['Finished', 'Running', 'Archived', 'Cancelled'])
           .orderBy('fromDate', 'desc')
           .limit(30)
           .get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
               const competition = doc.data();
-              const fromDay = dayjs.unix(0).add(competition.fromDate, 'd');
-              const toDay = dayjs.unix(0).add(competition.toDate, 'd');
-              competition.fromDate = fromDay.format('YYYY-MM-DD');
-              competition.toDate = toDay.format('YYYY-MM-DD');
               setComps((old) => ({...old, [doc.id]: competition}));
             });
           });
     }
   }, []);
 
+  const isoDate = (field) => (row) => {
+    return dayjs.unix(0).add(row[field], 'd').format('YYYY-MM-DD');
+  };
+
   const columns = React.useMemo(
       () => [
         {
-          Header: 'Competitions',
+          Header: 'Events',
           columns: [
             {
               Header: 'Name',
               accessor: 'name',
+            },
+            {
+              Header: 'Summary',
+              accessor: 'eventSummary',
+            }, {
+              Header: 'Registration',
+              accessor: isoDate('registrationDeadline'),
+              id: 'registrationDeadline',
+            },
+            {
+              Header: 'From',
+              accessor: isoDate('fromDate'),
+              id: 'fromDate',
+            }, {
+              Header: 'To',
+              accessor: isoDate('toDate'),
+              id: 'toDate',
+            },
+            {
+              Header: 'Status',
+              accessor: 'status',
+            },
+            {
+              Header: 'Type',
+              accessor: 'type',
             },
             {
               Header: 'Source',
@@ -42,13 +69,6 @@ const CompetitionOverview = ({})=> {
             {
               Header: 'IDs',
               accessor: 'sourceIds',
-            },
-            {
-              Header: 'From',
-              accessor: 'fromDate',
-            }, {
-              Header: 'To',
-              accessor: 'toDate',
             },
           ],
         },
@@ -62,4 +82,4 @@ const CompetitionOverview = ({})=> {
   );
 };
 
-export {CompetitionOverview};
+export {Results};

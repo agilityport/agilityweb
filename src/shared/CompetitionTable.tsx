@@ -4,13 +4,11 @@ import React from 'react';
 import {useTable} from 'react-table';
 
 const CompetitionTable = ({columns, data} : any) => {
-  // Use the state and functions returned from useTable to build your UI
   const {getTableProps, headerGroups, rows, prepareRow} = useTable({
     columns,
     data,
   });
 
-  // Render the UI for your table
   return (
     <MaUTable {...getTableProps()}>
       <TableHead>
