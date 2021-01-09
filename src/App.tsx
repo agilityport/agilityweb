@@ -3,11 +3,12 @@ import './App.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import {FirebaseProvider} from './FirebaseProvider';
-import {CompetitionOverview} from './CompetitionOverivew';
+import {Schedule} from './schedule/Schedule';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import {IconButton, Tab, Tabs} from '@material-ui/core';
 import {AccountCircleOutlined} from '@material-ui/icons';
+import {Results} from './results/Results';
 
 const theme = createMuiTheme({
   palette: {
@@ -51,7 +52,8 @@ const App = () => {
             </Box>
           </Toolbar>
         </AppBar>
-        <CompetitionOverview/>
+        { navItem == 0 && <Schedule/>}
+        { navItem == 1 && <Results/>}
       </FirebaseProvider>
     </ThemeProvider>
   );
