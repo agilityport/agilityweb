@@ -2,6 +2,7 @@
 Codebase for [agilityport.web.app](https://agilityport.web.app) - the web frontend for agility port
 
 ![Build Status](https://github.com/agilityport/agilityweb/workflows/live/badge.svg)
+[![Gitter chat](https://badges.gitter.im/agilityport/gitter.png)](https://gitter.im/agilityport/community)
 
 # Roadmap
 It is still very early, and a lot can change quickly, but the overall idea is to:
@@ -15,13 +16,14 @@ It is still very early, and a lot can change quickly, but the overall idea is to
 # Contribute
 This is a GPLv3 project aimed to assist athletes and organisers in the agility sport.
 It will only be a success if you join forces with the rest of the team. 
-Some areas that might kick start your contributions are:
 
 * Take a look at existing [issues](https://github.com/agilityport/agilityweb/issues)
 * The organiser module/pages needs people with organising experience
 * Registration and payment section too
 * Statistics and analytics - the results accumulated in this project will be the largest ever.
 * General UI and UX contributions will always be in demand
+  
+Ideas and feedback is always welcome at [gitter.im](https://gitter.im/agilityport/community)
 
 # Immediate TODOS
 * Result table, expand events and results
