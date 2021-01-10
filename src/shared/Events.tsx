@@ -51,7 +51,7 @@ const Events = ({competitionId} )=> {
 
   const data = React.useMemo(() => Object.values(events), [events]);
   return (
-    <EventsTable columns={columns} data={data}/>
+    <EventsTable columns={columns} data={data} bgcolor="primary.light"/>
   );
 };
 

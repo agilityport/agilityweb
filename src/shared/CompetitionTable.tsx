@@ -66,20 +66,23 @@ const CompetitionTable = ({columns, data} : any) => {
   return (
     <MaUTable {...getTableProps()}>
       <TableHead>
-        {headerGroups.map((headerGroup, i) => (
-          <TableRow key={i} {...headerGroup.getHeaderGroupProps()}>
-            {headerGroup.headers.map((column, j) => (
-              <TableCell key={j}
-                {...column.getHeaderProps(column.getSortByToggleProps())}>
-                <span>
-                  {column.render('Header')}
-                  <TableSortLabel active={column.isSorted}
-                    direction={column.isSortedDesc ? 'desc' : 'asc'}/>
-                </span>
-              </TableCell>
-            ))}
-          </TableRow>
-        ))}
+        {headerGroups.map((headerGroup, i) => {
+          if (i == 0) return null; // TODO an other way to exclude group header?
+          return (
+            <TableRow key={i} {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map((column, j) => (
+                <TableCell key={j}
+                  {...column.getHeaderProps(column.getSortByToggleProps())}>
+                  <span>
+                    {column.render('Header')}
+                    <TableSortLabel active={column.isSorted}
+                      direction={column.isSortedDesc ? 'desc' : 'asc'}/>
+                  </span>
+                </TableCell>
+              ))}
+            </TableRow>
+          );
+        })}
       </TableHead>
       <TableBody>
         {rows.map((row, i) => {
