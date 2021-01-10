@@ -12,6 +12,7 @@ import {
   Switch,
   Route,
   useHistory,
+  useLocation,
 } from 'react-router-dom';
 import {Schedule} from './schedule/Schedule';
 import {Results} from './results/Results';
@@ -31,7 +32,9 @@ const theme = createMuiTheme({
 
 const RoutedApp = () => {
   const history = useHistory();
-  const mainPath = history.location.pathname.split('/')[0];
+  const location = useLocation();
+  const mainPath = location.pathname.split('/')[1];
+  const tabValue = mainPath === '' ? 'schedule' : mainPath;
 
   useEffect(() => {
     if (history.location.pathname === '/') {
@@ -48,7 +51,7 @@ const RoutedApp = () => {
               flexGrow={1} alignItems="center">
               <img src="agilityportlogo.png" alt="logo" height="35px"/>
               <Tabs
-                value={mainPath === '' ? 'schedule' : mainPath}
+                value={tabValue}
                 onChange={(event, value)=>{
                   history.push('/' + value);
                 }}
