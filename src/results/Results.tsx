@@ -1,7 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {FirebaseContext} from '../FirebaseProvider';
-import {CompetitionTable} from '../shared/CompetitionTable';
-import dayjs from 'dayjs';
+import {competitionColumns, CompetitionTable} from '../shared/CompetitionTable';
 
 const Results = ({})=> {
   const firebase = useContext(FirebaseContext);
@@ -24,62 +23,9 @@ const Results = ({})=> {
     }
   }, []);
 
-  const isoDate = (field) => (row) => {
-    return dayjs.unix(0).add(row[field], 'd').format('YYYY-MM-DD');
-  };
-
-  const columns = React.useMemo(
-      () => [
-        {
-          Header: 'Events',
-          columns: [
-            {
-              Header: 'Name',
-              accessor: 'name',
-            },
-            {
-              Header: 'Summary',
-              accessor: 'eventSummary',
-            }, {
-              Header: 'Registration',
-              accessor: isoDate('registrationDeadline'),
-              id: 'registrationDeadline',
-            },
-            {
-              Header: 'From',
-              accessor: isoDate('fromDate'),
-              id: 'fromDate',
-            }, {
-              Header: 'To',
-              accessor: isoDate('toDate'),
-              id: 'toDate',
-            },
-            {
-              Header: 'Status',
-              accessor: 'status',
-            },
-            {
-              Header: 'Type',
-              accessor: 'type',
-            },
-            {
-              Header: 'Source',
-              accessor: 'source',
-            },
-            {
-              Header: 'IDs',
-              accessor: 'sourceIds',
-            },
-          ],
-        },
-      ],
-      [],
-  );
-
+  const columns = React.useMemo(() => competitionColumns, []);
   const data = React.useMemo(() => Object.values(comps), [comps]);
-  return (
-    <CompetitionTable columns={columns} data={data}/>
-  );
+  return (<CompetitionTable columns={columns} data={data}/>);
 };
 
 export {Results};
