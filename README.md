@@ -1,24 +1,31 @@
 # Agility Web
-A web frontend for agility port.
+Codebase for [agilityport.web.app](https://agilityport.web.app) - the web frontend for agility port
 
-Hosted at: https://agilityport.web.app/
-
-
+![Build Status](https://github.com/agilityport/agilityweb/workflows/live/badge.svg)
 
 # Roadmap
 It is still very early, and a lot can change quickly, but the overall idea is to:
 
-1. Make a top-notch view for planned, running and completed competitions
-2. Enable registration of community/unofficial competitions
-3. Run competitions with this system (enter runs in this system)
-4. Enable payment for these unofficial competitions
-5. Make a competition planner - customising a schedule for one or more equipages.
+1. Make a top-notch view for agility schedules and results (import from other systems)
+2. Registration of community/unofficial competitions (one place to plan your events)
+3. Organiser module to run competitions - exporting results to official systems
+4. Handle registration and payments
+5. Event planner - plan your intra-event schedule (when to run where with which dog)
+
+# Contribute
+This is a GPLv3 project aimed to assist athletes and organisers in the agility sport.
+It will only be a success if you join forces with the rest of the team. 
+Some areas that might kick start your contributions are:
+
+* Take a look at existing [issues](https://github.com/agilityport/agilityweb/issues)
+* The organiser module/pages needs people with organising experience
+* Registration and payment section too
+* Statistics and analytics - the results accumulated in this project will be the largest ever.
+* General UI and UX contributions will always be in demand
 
 # Immediate TODOS
-* Incorporate logo
-* Set teaming - do not use default material colors
-* Work on competition table
-* Work on pagination and search
+* Result table, expand events and results
+* Pagination and table manipulation (sort and filter)
 
 # Technology stack
 Name dropping some technologies used in this project.
@@ -27,7 +34,7 @@ Name dropping some technologies used in this project.
 * Authentication: Firebase
 * Database: Firestore
 * Main UI framework: material-ui
-* Notable libraries: react-table and dayjs
+* Notable libraries: react-table, react-router and dayjs
 
 # Starting from scratch
 If you want to know how we ended up here, this is it:
