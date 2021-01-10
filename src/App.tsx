@@ -5,8 +5,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import {FirebaseProvider} from './FirebaseProvider';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
-import {IconButton, Tab, Tabs} from '@material-ui/core';
-import {AccountCircleOutlined} from '@material-ui/icons';
+import {IconButton, Tab, Tabs, SvgIcon} from '@material-ui/core';
+import {AccountCircleOutlined, GitHub} from '@material-ui/icons';
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,6 +29,14 @@ const theme = createMuiTheme({
     },
   },
 });
+
+const GotoGithub = () => {
+  window.location.href = 'https://github.com/agilityport/agilityweb';
+};
+
+const GotoGitter = () => {
+  window.location.href = 'https://gitter.im/agilityport/community';
+};
 
 const RoutedApp = () => {
   const history = useHistory();
@@ -63,9 +71,27 @@ const RoutedApp = () => {
                 <Tab value="results" label="Results" />
                 <Tab value="organise" label="Organize" />
               </Tabs>
-              <IconButton color="inherit">
-                <AccountCircleOutlined/>
-              </IconButton>
+              <div>
+                <IconButton>
+                  <SvgIcon onClick={GotoGitter}>
+                    <line stroke="#fff" id="svg_1"
+                      y2="14.42188" x2="5.59375"
+                      y1="3.64063" x1="5.59375" strokeWidth="2" />
+                    <line stroke="#fff" id="svg_2" y2="21.4458" x2="9.8125"
+                      y1="7.85205" x1="9.8125" strokeWidth="2" fill="none"/>
+                    <line id="svg_3" y2="21.4458" x2="13.875" y1="8.0083"
+                      x1="13.875" strokeWidth="2" stroke="#fff" fill="none"/>
+                    <line stroke="#fff" id="svg_4" y2="13.78955" x2="17.625"
+                      y1="8.0083" x1="17.625" strokeWidth="2" fill="none"/>
+                  </SvgIcon>
+                </IconButton>
+                <IconButton color="inherit" >
+                  <GitHub onClick={GotoGithub}/>
+                </IconButton>
+                <IconButton color="inherit">
+                  <AccountCircleOutlined/>
+                </IconButton>
+              </div>
             </Box>
           </Toolbar>
         </AppBar>
