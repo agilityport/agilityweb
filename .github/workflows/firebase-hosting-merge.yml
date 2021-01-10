@@ -1,4 +1,4 @@
-name: Deploy to live on merge
+name: live
 'on':
   push:
     branches:
