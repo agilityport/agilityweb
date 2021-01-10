@@ -15,8 +15,8 @@ import {
   useLocation,
 } from 'react-router-dom';
 import {Schedule} from './schedule/Schedule';
-import {Results} from './results/Results';
 import {Organise} from './organise/Organise';
+import {Results} from './results/Results';
 
 const theme = createMuiTheme({
   palette: {
@@ -37,10 +37,10 @@ const RoutedApp = () => {
   const tabValue = mainPath === '' ? 'schedule' : mainPath;
 
   useEffect(() => {
-    if (history.location.pathname === '/') {
+    if (location.pathname === '/') {
       history.push('/schedule');
     }
-  }, [history]);
+  }, [history, location]);
 
   return (
     <ThemeProvider theme={theme}>
